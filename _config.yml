@@ -1,11 +1,3 @@
-inherit_gem:
-  rubocop-github:
-    - config/default.yml
-
-AllCops:
-  Exclude:
-    - _site/**/*
-    - vendor/**/*
-
-Layout/LineLength:
-  Enabled: false
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme 
