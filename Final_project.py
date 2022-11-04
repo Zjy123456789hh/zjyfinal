@@ -24,10 +24,10 @@ top_genre_filter = st.sidebar.multiselect(
 #pop插件
 pop_filter = st.sidebar.radio(
     'Choose the pop level',
-    ('All','Low', 'Medium', 'High'))
-if pop_filter == 'Low':
+    ('All','Low(No more than 50)', 'Medium(Between 50 and 75)', 'High(More than 75)'))
+if pop_filter == 'Low(No more than 50)':
     df = df[df['pop'] <= 50]
-elif pop_filter == 'Medium':
+elif pop_filter == 'Medium(Between 50 and 75)':
     df = df[(df['pop'] < 75) & (df['pop'] > 50)]
 else:
     df = df[df['pop'] > 75]
